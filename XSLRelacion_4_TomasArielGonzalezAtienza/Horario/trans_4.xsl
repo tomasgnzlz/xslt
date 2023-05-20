@@ -5,7 +5,9 @@
         <head>
             <title>Ejercicio4</title>
             <style>
-                
+                a{
+                    color:#3d85c6;
+                }
             </style>
         </head>
         <body>
@@ -68,18 +70,12 @@
                             <xsl:value-of select="nombre"/>&#160; - &#160;
                                 <xsl:choose>
 
-                                    <xsl:when test="hora-ini &gt; 12">
-                                        Al mediodia
-                                    </xsl:when>
-                                    <xsl:when test="hora-ini &lt; 14">
-                                        Al mediodia
-                                    </xsl:when>
-
-                                    <xsl:when test="hora-ini &gt; 9">
+                                    <xsl:when test="hora-ini = 9">
                                         Por la Mañana
                                     </xsl:when>
-                                    <xsl:when test="hora-ini &lt; 11">
-                                        Por la Mañana
+                                    
+                                    <xsl:when test="hora-ini = 12">
+                                        Al mediodia
                                     </xsl:when>
 
                                     <xsl:otherwise>
